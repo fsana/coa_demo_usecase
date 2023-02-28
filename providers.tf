@@ -8,3 +8,5 @@ provider "oci" {
   private_key_path = var.private_key_path
   region           = var.region
 }
+
+

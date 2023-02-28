@@ -33,6 +33,7 @@ resource "oci_core_instance" "web_instance" {
   source_details {
     #Required
     source_id   = data.oci_core_images.this.images[0].id
+    #source_id = var.image_id
     source_type = "image"
   }
   preserve_boot_volume = false
@@ -69,6 +70,7 @@ resource "oci_core_instance" "bastion_instance" {
   source_details {
     #Required
     source_id   = data.oci_core_images.this.images[0].id
+    #source_id = var.image_id
     source_type = "image"
   }
   preserve_boot_volume = false

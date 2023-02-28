@@ -14,8 +14,8 @@ resource "null_resource" "configure_bastion_host" {
       host        = oci_core_instance.bastion_instance.public_ip
     }
 
-    source      = "/Users/cotudor/my_ssh_keys/cos_key.openssh"
-    destination = "/home/opc/.ssh/cos_key.openssh"
+    source      = "/Users/flaviusssana/.ssh/id_rsa.pub"
+    destination = "/home/opc/.ssh/id_rsa.pub"
   }
 
   provisioner "remote-exec" {
@@ -28,7 +28,7 @@ resource "null_resource" "configure_bastion_host" {
     }
 
     inline = [
-      "chmod 600 /home/opc/.ssh/cos_key.openssh"
+      "chmod 600 /home/opc/.ssh/id_rsa.pub"
     ]
   }
 }

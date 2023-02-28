@@ -6,7 +6,7 @@
 #############################
 
 # default compartment 
-default_compartment_id = "ocid1.compartment.oc1..aaaaaaaawwhpzd5kxd7dcd56kiuuxeaa46icb44cnu7osq3mbclo2pnv3dpq"
+default_compartment_id = "ocid1.compartment.oc1..aaaaaaaab2y6nubutvdah5nwpvhazh7xks5q6ukejnclq3vckh4n5zwwzr7q"
 
 #############################
 # naming convension
@@ -49,20 +49,20 @@ public_subnet_cidr = "10.0.20.0/24"
 compute_compartment_id = null
 
 # The number of cluster nodes to be provisioned
-cluster_size = 2
+cluster_size = 3
 
 # Compute instances ssh public key
-ssh_public_key_path = "/Users/cotudor/my_ssh_keys/cos_key.pub"
+ssh_public_key_path = "/Users/flaviusssana/Documents/keys/personal/id_rsa.pub"
 
 # Compute instances ssh private key
-ssh_private_key_path = "/Users/cotudor/my_ssh_keys/cos_key.openssh"
+ssh_private_key_path = "/Users/flaviusssana/Documents/keys/personal/id_rsa"
 
 # The name of the shape to be used for all the provisioned compute instances. The automation will automatically figure out the OCID for the spaecific shape name in the target region.
-shape = "VM.Standard1.1"
-
+shape = "VM.Standard2.1"
+image_id = "ocid1.image.oc1.eu-amsterdam-1.aaaaaaaav3mfupbqttnhzvzevastims53wv56prcdcm3gvdxdfia5yyrlvhq"
 
 # The name of the image to be used for all the provisioned compute instances. The automation will automatically figure out the OCID for the specific image name in the target region.
-image_name = "Oracle-Linux-8.5-2022.04.04-0"
+image_name = "Oracle-Linux-8.6-2022.12.15-0"
 
 
 # Which product to install
@@ -82,12 +82,12 @@ lbaas_listening_ports = ["443"]
 
 # The path to the load balancer route key CA certificate(CA)
 # Only used if port SSL:443 is enabled
-lb_ca_certificate = "./certs/ca.crt"
+lb_ca_certificate = "./certs/rootCA.crt"
 
 # The path to the load balancer private_key
 # Only used if port SSL:443 is enabled
-lb_private_key = "./certs/loadbalancer.key"
+lb_private_key = "./certs/demo1.key"
 
 # The path to the load balancer public_certificate
 # Only used if port SSL:443 is enabled
-lb_public_certificate = "./certs/loadbalancer.crt"
+lb_public_certificate = "./certs/demo1.crt"

@@ -137,6 +137,12 @@ variable "shape" {
   description = "The name of the shape to be used for all the provisioned compute instances. The automation will automatically figure out the OCID for the spaecific shape name in the target region."
 }
 
+variable "image_id" {
+  type = string
+  default = "ocid1.image.oc1.eu-amsterdam-1.aaaaaaaav3mfupbqttnhzvzevastims53wv56prcdcm3gvdxdfia5yyrlvhq"
+  description = "Image OCID"
+}
+
 # The name of the image to be used for all the provisioned compute instances. The automation will automatically figure out the OCID for the specific image name in the target region.
 variable "image_name" {
   type        = string
